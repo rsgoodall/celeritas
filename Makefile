@@ -13,3 +13,6 @@ coverage:
 ## build: builds the command line tool dist directory
 build:
 	@go build -o ./dist/celeritas ./cmd/cli
+
+build_cli:
+	@go build -o ../myapp/celeritas ./cmd/cli
