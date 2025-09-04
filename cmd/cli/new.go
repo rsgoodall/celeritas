@@ -106,7 +106,13 @@ func doNew(appName string) {
 
 	// run go mod tidy
 	color.Yellow("\tRunning go mod tidy...")
-	cmd := exec.Command("go", "mod", "tidy")
+	cmd := exec.Command("go", "get", "github.com/rsgoodall/celeritas")
+	err = cmd.Start()
+	if err != nil {
+		exitGracefully(err)
+	}
+
+	cmd = exec.Command("go", "mod", "tidy")
 	err = cmd.Start()
 	if err != nil {
 		exitGracefully(err)

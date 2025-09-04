@@ -9,7 +9,6 @@ require (
 	github.com/go-chi/chi/v5 v5.2.2
 	github.com/gorilla/sessions v1.4.0
 	github.com/markbates/goth v1.82.0
-	github.com/rsgoodall/celeritas v1.0.0
 	github.com/upper/db/v4 v4.10.0
 	golang.org/x/crypto v0.39.0
 )
@@ -139,5 +138,3 @@ require (
 	google.golang.org/protobuf v1.35.1 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
-
-replace github.com/rsgoodall/celeritas v1.0.0 => ../celeritas
