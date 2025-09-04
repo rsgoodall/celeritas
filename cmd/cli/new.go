@@ -64,6 +64,9 @@ func doNew(appName string) {
 		}
 		defer source.Close()
 		destination, err := os.Create(fmt.Sprintf("./%s/Makefile", appName))
+		if err != nil {
+			exitGracefully(err)
+		}
 		defer destination.Close()
 		_, err = io.Copy(destination, source)
 		if err != nil {
@@ -76,6 +79,9 @@ func doNew(appName string) {
 		}
 		defer source.Close()
 		destination, err := os.Create(fmt.Sprintf("./%s/Makefile", appName))
+		if err != nil {
+			exitGracefully(err)
+		}
 		defer destination.Close()
 		_, err = io.Copy(destination, source)
 		if err != nil {
